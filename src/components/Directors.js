@@ -5,11 +5,11 @@ function Directors() {
 
   const renderDirectors = directors.map(director => {
     const moviesList = director.movies.map(movie => {
-      return <li>{movie}</li>;
+      return <li key={movie}>{movie}</li>;
     })
     
     return(
-      <div>
+      <div key={director.name}>
         <p><b>{director.name}</b></p>
         <ul>
           {moviesList}
