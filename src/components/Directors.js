@@ -18,7 +18,12 @@ function Directors() {
     );
   })
 
-  return <div>{renderDirectors}</div>;
+  return (
+    <div>
+      <h1>Directors Page</h1>
+      {renderDirectors}
+    </div>
+  );
 }
 
 export default Directors;
