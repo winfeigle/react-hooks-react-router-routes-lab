@@ -4,16 +4,13 @@ import { movies } from "../data";
 function Movies() {
 
     const renderMovies = movies.map(movie => {
-      const genres = movie.genres.map(genre => {
-        return <li>{genre}</li>;
-      })
 
       return(
-          <div>
+          <div key={movie.title}>
             <p><b>{movie.title}</b></p>
             <p><em>{movie.time} minutes</em></p>
             <ul>
-              { genres }
+              { movie.genres.map(genre => <li key={genre}>{genre}</li>) }
             </ul>
           </div>
       );
